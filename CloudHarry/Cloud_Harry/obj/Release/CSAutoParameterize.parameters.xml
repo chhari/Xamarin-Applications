@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnectionString-Web.config Connection String" description="DefaultConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFileName=C:\Users\haris\Documents\harry.mdf;Integrated Security=True;MultipleActiveResultSets=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="c:\\users\\haris\\documents\\visual\ studio\ 2015\\Projects\\CloudHarry\\Cloud_Harry\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnectionString']/@connectionString" />
+  </parameter>
+</parameters>
