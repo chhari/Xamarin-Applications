@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+	<uses-sdk android:minSdkVersion="15" />
+	<application>
+	<meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyDTHxNERzmJ9blkdZ5xQwFE0XI-qRa_nNg"/>
+    <meta-data android:name="com.google.android.gms.version"
+      android:value="@integer/google_play_services_version" />
+        </application>
+</manifest>

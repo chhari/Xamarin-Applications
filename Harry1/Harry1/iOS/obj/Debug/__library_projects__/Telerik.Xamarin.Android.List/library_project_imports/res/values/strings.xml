@@ -1,0 +1,5 @@
+<resources>
+    <string name="on_demand_manual_button_idle">LOAD MORE</string>
+    <string name="on_demand_manual_button_busy">LOADING&#8230;</string>
+    <string name="list_view_default_empty_content">No items</string>
+</resources>

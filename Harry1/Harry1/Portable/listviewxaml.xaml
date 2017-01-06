@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             x:Class="Portable.listviewxaml">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Activated="OnToolbarButtonClick" Order="Primary" Priority="0" />
+  </ContentPage.ToolbarItems>
+  <Grid>
+    <telerikPrimitives:RadSideDrawer x:Name="drawer" DrawerLength="200" DrawerTransitionType="SlideInOnTop" >
+      <telerikPrimitives:RadSideDrawer.MainContent>
+        <Label Text="Hari" />
+      </telerikPrimitives:RadSideDrawer.MainContent>
+      <telerikPrimitives:RadSideDrawer.DrawerContent>
+        <StackLayout>
+          <Button Text="About"
+                  Clicked= "OnAboutButton"/>
+          <Button Text="Location Selection" />
+          <Button Text="People" />
+        </StackLayout>
+      </telerikPrimitives:RadSideDrawer.DrawerContent>
+    </telerikPrimitives:RadSideDrawer>
+  </Grid>
+
+  <telerikDataControls:RadListView x:Name="listView" BackgroundColor="White">
+    <telerikDataControls:RadListView.ItemTemplate>
+      <DataTemplate>
+        <telerikListView:ListViewTemplateCell>
+          <telerikListView:ListViewTemplateCell.View>
+            <Grid BackgroundColor="{Binding Color}"/>
+          </telerikListView:ListViewTemplateCell.View>
+        </telerikListView:ListViewTemplateCell>
+      </DataTemplate>
+    </telerikDataControls:RadListView.ItemTemplate>
+    <telerikDataControls:RadListView.LayoutDefinition>
+      <telerikListView:ListViewGridLayout VerticalItemSpacing="5" HorizontalItemSpacing="5" SpanCount="1" ItemLength="200" />
+    </telerikDataControls:RadListView.LayoutDefinition>
+  </telerikDataControls:RadListView>
+</ContentPage>
