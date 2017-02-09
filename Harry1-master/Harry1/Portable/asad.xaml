@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+             xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+             xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+             xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+             xmlns:telerikGauges="clr-namespace:Telerik.XamarinForms.DataVisualization.Gauges;assembly=Telerik.XamarinForms.DataVisualization"
+xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+             x:Class="Portable.asad">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+<telerikDataControls:RadListView ItemsSource="{Binding Source}" BackgroundColor="White">
+    <telerikDataControls:RadListView.BindingContext>
+        <local:ViewModel />
+    </telerikDataControls:RadListView.BindingContext>
+    <telerikDataControls:RadListView.ItemTemplate>
+        <DataTemplate>
+            <telerikListView:ListViewTextCell Text="{Binding Title}" Detail="{Binding Author}" TextColor="Black" DetailColor="Gray" />
+        </DataTemplate>
+    </telerikDataControls:RadListView.ItemTemplate>
+    <telerikDataControls:RadListView.LayoutDefinition>
+        <telerikListView:ListViewLinearLayout ItemLength="70" />
+    </telerikDataControls:RadListView.LayoutDefinition>
+</telerikDataControls:RadListView>
+</ContentPage>

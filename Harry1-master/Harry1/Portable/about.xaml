@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             x:Class="Portable.about">
+	<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+ 
+    <ScrollView AutomationId="scrollView">
+      <Grid VerticalOptions="Fill" AutomationId="aboutPage">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Spacing="30" Padding="20,20,20,0" VerticalOptions="Center">
+          <StackLayout Spacing="6" VerticalOptions="Center">
+            <Label Text="HARRY" FontSize="32" FontAttributes="Bold" TextColor="White"
+							XAlign="Center" HorizontalOptions="Center" />
+
+            <Label x:Name="versionLabel" FontSize="Small" XAlign="Center" HorizontalOptions="Center"
+							 TextColor="White" />
+          </StackLayout>
+
+          <StackLayout>
+            <Label Text="Timepass TExt Remove after work" FontSize="Small" XAlign="Center" HorizontalOptions="Center"
+							TextColor="White"/>
+            <Label HorizontalOptions="Center" FontSize="11" TextColor="White">
+              <Label.FormattedText>
+                <FormattedString>
+                  <FormattedString.Spans>
+                    <Span Text="&#x2022; This App IS Made By Hari Saran&#10;" />
+                    <Span Text="&#x2022; Xamarin.Android&#10;" />
+                    <Span Text="&#x2022; Xamarin.Forms&#10;" />
+                    
+                  </FormattedString.Spans>
+                </FormattedString>
+              </Label.FormattedText>
+            </Label>
+          </StackLayout>
+        </StackLayout>
+      </Grid>
+    </ScrollView>
+</ContentPage>
